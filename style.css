@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&display=swap");
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Condensed", sans-serif;
+  background-image: linear-gradient(
+    to right,
+    rgb(22, 191, 253),
+    rgb(203, 48, 102)
+  );
+}
+
+.width-full {
+  width: 100%;
+}
+
+.main-form,
+.main-form .card-body {
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+
+.notes-container {
+  position: relative;
+  padding: 0 15px;
+  min-height: 150px;
+  max-height: 210px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+input:focus {
+  box-shadow: none !important;
+  border: 0.1rem solid rgb(22, 191, 253);
+}
+
+.main-btn {
+  color: #fff;
+  font-weight: 500;
+  font-size: 20px;
+  background-image: linear-gradient(
+    to right,
+    rgb(203, 48, 102),
+    rgb(22, 191, 253)
+  );
+  border: none !important;
+  transition: 0.3s;
+}
+
+.card-title {
+  position: relative;
+  width: fit-content;
+  margin: auto;
+  font-family: "Aboreto", cursive;
+  font-weight: 900;
+}
+
+.card-title::after {
+  content: attr(data-hover);
+  position: absolute;
+  left: 0;
+  overflow: hidden;
+  top: 0;
+  color: red;
+  animation: color-change 3s linear infinite alternate;
+}
+
+@keyframes color-change {
+  0% {
+    color: rgb(22, 191, 253);
+  }
+  25% {
+    color: #826aa3;
+  }
+  50% {
+    color: rgb(1, 166, 97);
+  }
+  75% {
+    color: rgb(22, 191, 253);
+  }
+  100% {
+    color: rgb(203, 48, 102);
+  }
+}
+
+.main-btn.disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.main-btn.disabled:hover {
+  background-image: linear-gradient(
+    to right,
+    rgb(203, 48, 102),
+    rgb(22, 191, 253)
+  );
+}
+
+.main-btn.disabled:focus {
+  color: #fff;
+  font-weight: 500;
+  background-image: linear-gradient(
+    to right,
+    rgb(203, 48, 102),
+    rgb(22, 191, 253)
+  ) !important;
+  box-shadow: none !important;
+}
+
+.main-btn:hover {
+  color: #fff;
+  background-image: linear-gradient(
+    to right,
+    rgb(22, 191, 253),
+    rgb(203, 48, 102)
+  );
+}
+
+.main-btn:focus {
+  color: #fff;
+  font-weight: 500;
+  background-image: linear-gradient(
+    to right,
+    rgb(22, 191, 253),
+    rgb(203, 48, 102)
+  ) !important;
+  box-shadow: none !important;
+}
+
+.notes-container::-webkit-scrollbar {
+  width: 5px;
+}
+
+.notes-container::-webkit-scrollbar-thumb {
+  background: #6e5892;
+  border-radius: 50px;
+}
+
+.notes-container .empty {
+  background: #f8f9fa;
+  padding: 15px;
+}
+
+.notes-container .close {
+  transition: 0.3s;
+}
+
+.notes-container .close:hover {
+  transform: rotate(90deg);
+}
+
+.notes-container .close:focus {
+  outline: none;
+  color: #6610f2;
+}
+
+.search-icon {
+  width: 20px;
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  transform: translateY(-50%);
+}
+
+.search-container {
+  position: relative;
+  max-width: 100%;
+  margin: 0 20px;
+  padding: 20px 10px;
+  box-shadow: 0px 0px 1px 1px rgb(0 0 0 / 5%);
+}
+
+.notes-container .operation-box {
+  transform: translateX(60px);
+  position: absolute;
+  cursor: pointer;
+  transition: 0.3s;
+  right: 0;
+  bottom: 0;
+  color: #c4438c;
+  background-color: #fff;
+  padding: 3px 7px 0 11px;
+}
+
+.notes-container .operation-box i {
+  font-size: 25px;
+}
+
+.notes-container .card:hover .operation-box {
+  transform: translateX(0);
+}
+
+.notes-container .card {
+  overflow-x: hidden;
+}
+
+.notes-container .checkCompleted-icon {
+  background-color: #3eb142;
+  padding: 3px 7px 0 11px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-top-left-radius: 50px;
+}
+
+.notes-container .checkCompleted-icon i {
+  color: #fff;
+  font-size: 20px;
+}
+
+.main-form .footer {
+  padding: 10px;
+  margin-top: 5px;
+  border-top: 1px solid rgba(1, 0, 0, 0.09);
+}
+
+.main-form .footer .btn {
+  padding: 2px 10px;
+  font-size: 14px;
+}
+
+.main-form .footer .btn:focus {
+  border: 1px solid rgba(0, 0, 0, 0.319);
+  box-shadow: none;
+}
+
+.main-form .footer .btn:last-child {
+  background-color: rgba(255, 0, 0, 0.745);
+  color: #fff;
+}
+
+.main-form .footer .btn.disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
